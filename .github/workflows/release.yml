@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0 # Fetches all history for all branches and tags
       - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: lts/*
           cache: 'npm'
       - run: npm ci
       - run: |
