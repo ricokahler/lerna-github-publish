@@ -17,7 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Bump: $BUMP"
-          echo "GITHUB_REF: $GITHUB_REF"
+          git checkout current
+          git rebase $GITHUB_REF
+          npm run build
+          lerna publish --no-private --exact --force-publish $BUMP
+          git push
+          git checkout next
+          git rebase current
+          git push
         env:
           BUMP: ${{ inputs.bump }}
