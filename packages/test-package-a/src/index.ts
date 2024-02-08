@@ -15,4 +15,9 @@ export const newValue = 'some new value';
  */
 export const newNewValue = 'another new value';
 
+/**
+ * @public
+ */
+export const newNewNewValue = 'yet another new value';
+
 export { darken };
