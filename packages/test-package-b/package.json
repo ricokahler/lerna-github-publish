@@ -5,6 +5,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": "github:ricokahler/lerna-github-publish",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pkg-utils build"
@@ -15,9 +16,7 @@
   "dependencies": {
     "@ricokahler/lazy": "^2.0.2"
   },
-  "files": [
-    "./dist"
-  ],
+  "files": ["./dist"],
   "main": "./dist/index.js",
   "exports": {
     ".": {

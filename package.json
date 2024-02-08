@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": "github:ricokahler/lerna-github-publish",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build -ws"
@@ -11,9 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "browserslist": "extends @sanity/browserslist-config",
   "devDependencies": {
     "@sanity/pkg-utils": "^4.1.3",
