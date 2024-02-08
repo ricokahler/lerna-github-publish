@@ -37,9 +37,9 @@ jobs:
           npm run build
           lerna publish --no-private --exact --force-publish --yes $BUMP
 
-          git push
+          git push --force-with-lease
           git checkout next
           git rebase current
-          git push
+          git push --force-with-lease
         env:
           BUMP: ${{ github.event.inputs.bump }}
