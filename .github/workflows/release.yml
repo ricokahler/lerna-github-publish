@@ -14,12 +14,13 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetches all history for all branches and tags
-          token: ${{ secrets.GH_PUSH_PAT }}
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
