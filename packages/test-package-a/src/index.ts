@@ -10,4 +10,9 @@ export const someValue = true;
  */
 export const newValue = 'some new value';
 
+/**
+ * @public
+ */
+export const newNewValue = 'another new value';
+
 export { darken };
