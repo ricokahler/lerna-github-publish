@@ -1,0 +1,23 @@
+{
+  "name": "@ricokahler/lerna-github-publish",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build -ws"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "browserslist": "extends @sanity/browserslist-config",
+  "devDependencies": {
+    "@sanity/pkg-utils": "^4.1.3",
+    "lerna": "^8.1.2",
+    "typescript": "^5.3.3"
+  }
+}

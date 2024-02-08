@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Bump'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Bump: $BUMP"
+        env:
+          BUMP: ${{ inputs.bump }}
