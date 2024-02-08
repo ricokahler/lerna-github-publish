@@ -30,7 +30,7 @@ jobs:
           git checkout current
           git rebase ${{ github.ref }}
           npm run build
-          lerna publish --no-private --exact --force-publish $BUMP
+          lerna publish --no-private --exact --force-publish --yes $BUMP
           git push
           git checkout next
           git rebase current
