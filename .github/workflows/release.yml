@@ -16,9 +16,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history for all branches and tags
       - run: |
+          git fetch --all
           git checkout current
-          git rebase $GITHUB_REF
+          git rebase ${{ github.ref }}
           npm run build
           lerna publish --no-private --exact --force-publish $BUMP
           git push
@@ -26,4 +30,4 @@ jobs:
           git rebase current
           git push
         env:
-          BUMP: ${{ inputs.bump }}
+          BUMP: ${{ github.event.inputs.bump }}
