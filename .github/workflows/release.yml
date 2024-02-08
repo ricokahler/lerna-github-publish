@@ -11,10 +11,6 @@ on:
         options:
           - patch
           - minor
-      token:
-        description: 'Token'
-        required: true
-        type: string
 
 jobs:
   release:
@@ -52,5 +48,5 @@ jobs:
           git push --force-with-lease
         env:
           BUMP: ${{ github.event.inputs.bump }}
-          NODE_AUTH_TOKEN: ${{ github.event.inputs.token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
