@@ -43,3 +43,4 @@ jobs:
           git push --force-with-lease
         env:
           BUMP: ${{ github.event.inputs.bump }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
