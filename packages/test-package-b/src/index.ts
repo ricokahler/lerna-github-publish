@@ -9,3 +9,8 @@ export const Lazy = _Lazy;
  * @public
  */
 export const drip = "drop";
+
+/**
+ * @public
+ */
+export const beep = "boop";

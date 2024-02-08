@@ -25,4 +25,9 @@ export const newNewNewValue = "yet another new value";
  */
 export const drip = "drop";
 
+/**
+ * @public
+ */
+export const beep = "boop";
+
 export { darken };
