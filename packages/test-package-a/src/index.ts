@@ -1,33 +1,38 @@
-import { darken } from "color2k";
+import { darken } from 'color2k'
 
 /**
  * @public
  */
-export const someValue = true;
+export const someValue = true
 
 /**
  * @public
  */
-export const newValue = "some new value";
+export const newValue = 'some new value'
 
 /**
  * @public
  */
-export const newNewValue = "another new value";
+export const newNewValue = 'another new value'
 
 /**
  * @public
  */
-export const newNewNewValue = "yet another new value";
+export const newNewNewValue = 'yet another new value'
 
 /**
  * @public
  */
-export const drip = "drop";
+export const drip = 'drop'
 
 /**
  * @public
  */
-export const beep = "boop";
+export const beep = 'boop'
 
-export { darken };
+/**
+ * @public
+ */
+export const flip = 'flop'
+
+export { darken }
