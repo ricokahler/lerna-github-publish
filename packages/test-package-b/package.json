@@ -2,6 +2,9 @@
   "name": "@ricokahler/test-package-b",
   "version": "1.0.0",
   "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pkg-utils build"
