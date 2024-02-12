@@ -46,6 +46,7 @@ jobs:
           # https://github.com/actions/checkout/pull/1184
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config --global advice.skippedCherryPicks false
 
           # Fetch all branches (-u allows fetching the current branch)
           git fetch origin current:current -u
