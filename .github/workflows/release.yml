@@ -103,6 +103,10 @@ jobs:
 
       - name: Rebase 'next'
         run: |
+          # Ensure branches are up to date
+          git fetch origin current:current -u
+          git fetch origin next:next -u
+
           git checkout next
           git rebase current
           git push --set-upstream origin next
