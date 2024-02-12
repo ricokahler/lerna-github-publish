@@ -1,6 +1,6 @@
 {
   "name": "@ricokahler/test-package-a",
-  "version": "1.11.2",
+  "version": "1.11.3",
   "description": "",
   "publishConfig": {
     "access": "public"
