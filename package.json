@@ -12,11 +12,14 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "browserslist": "extends @sanity/browserslist-config",
   "devDependencies": {
     "@sanity/pkg-utils": "^4.1.3",
     "lerna": "^8.1.2",
+    "semver": "^7.6.0",
     "typescript": "^5.3.3"
   }
 }
