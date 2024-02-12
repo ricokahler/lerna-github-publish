@@ -104,4 +104,4 @@ jobs:
         run: |
           git checkout next
           git rebase current
-          git push
+          git push --set-upstream origin next
