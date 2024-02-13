@@ -110,5 +110,18 @@ jobs:
           git fetch origin next:next -u
 
           git checkout next
-          git rebase current
-          git push --set-upstream origin next
+          git checkout -b update-next-branch-${{ github.run_number }}
+          git push --set-upstream origin update-next-branch-${{ github.run_number }}
+
+      - name: Create Pull Request
+        uses: actions/github-script@v5
+        with:
+          script: |
+            await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'v${{ inputs.version }}',
+              body: 'This PR includes the latest changes rebased from the current branch onto the next branch.',
+              head: 'update-next-branch-${{ github.run_number }}',
+              base: 'next'
+            })
