@@ -112,6 +112,7 @@ jobs:
 
           git checkout next
           git checkout -b update-next-branch-${{ github.run_number }}
+          git rebase current
           git push --set-upstream origin update-next-branch-${{ github.run_number }}
 
       - name: Create Pull Request
