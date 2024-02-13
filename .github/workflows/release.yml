@@ -11,7 +11,7 @@ on:
 jobs:
   release:
     environment:
-      name: release
+      name: npm
     permissions:
       contents: write
       id-token: write
